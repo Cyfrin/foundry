@@ -1,5 +1,5 @@
 [package]
-name = "foundry-config"
+name = "cyfrin-foundry-config"
 description = "Foundry configuration"
 
 version.workspace = true
