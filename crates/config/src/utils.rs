@@ -90,7 +90,7 @@ pub fn find_project_root_path(path: Option<&PathBuf>) -> std::io::Result<PathBuf
 /// # Example
 ///
 /// ```
-/// use cyfrin_foundry_config::remappings_from_newline;
+/// use foundry_config::remappings_from_newline;
 /// let remappings: Result<Vec<_>, _> = remappings_from_newline(
 ///     r#"
 ///              file-ds-test/=lib/ds-test/
@@ -140,7 +140,7 @@ pub fn to_array_value(val: &str) -> Result<Value, figment::Error> {
 /// # Example
 ///
 /// ```no_run
-/// use cyfrin_foundry_config::utils;
+/// use foundry_config::utils;
 /// let dirs = utils::foundry_toml_dirs("./lib");
 /// ```
 ///

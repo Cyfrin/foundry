@@ -2,7 +2,7 @@ use alloy_json_abi::JsonAbi;
 use alloy_primitives::Address;
 use foundry_common::ContractsByArtifact;
 use foundry_compilers::ArtifactId;
-use cyfrin_foundry_config::{Chain, Config};
+use foundry_config::{Chain, Config};
 use std::borrow::Cow;
 
 mod local;

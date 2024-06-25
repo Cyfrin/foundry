@@ -5,7 +5,7 @@ use foundry_block_explorers::{
     errors::EtherscanError,
 };
 use foundry_common::compile::{etherscan_project, ContractSources};
-use cyfrin_foundry_config::{Chain, Config};
+use foundry_config::{Chain, Config};
 use futures::{
     future::{join_all, Future},
     stream::{FuturesUnordered, Stream, StreamExt},

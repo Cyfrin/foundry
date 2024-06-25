@@ -9,7 +9,7 @@ use foundry_cli::{
     utils,
 };
 use foundry_common::ens::NameOrAddress;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use std::str::FromStr;
 
 /// CLI arguments for `cast access-list`.

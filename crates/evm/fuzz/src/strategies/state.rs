@@ -2,7 +2,7 @@ use crate::invariant::{BasicTxDetails, FuzzRunIdentifiedContracts};
 use alloy_dyn_abi::{DynSolType, DynSolValue, EventExt, FunctionExt};
 use alloy_json_abi::{Function, JsonAbi};
 use alloy_primitives::{Address, Bytes, Log, B256, U256};
-use cyfrin_foundry_config::FuzzDictionaryConfig;
+use foundry_config::FuzzDictionaryConfig;
 use foundry_evm_core::utils::StateChangeset;
 use indexmap::IndexSet;
 use parking_lot::{lock_api::RwLockReadGuard, RawRwLock, RwLock};

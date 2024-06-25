@@ -18,7 +18,7 @@ use foundry_common::{
     provider::get_http_provider,
     shell, ContractsByArtifact,
 };
-use cyfrin_foundry_config::{Config, NamedChain};
+use foundry_config::{Config, NamedChain};
 use foundry_debugger::Debugger;
 use foundry_evm::{
     decode::decode_console_logs,

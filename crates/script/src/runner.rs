@@ -4,7 +4,7 @@ use alloy_primitives::{Address, Bytes, TxKind, U256};
 use alloy_rpc_types::TransactionRequest;
 use eyre::Result;
 use foundry_cheatcodes::BroadcastableTransaction;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use foundry_evm::{
     constants::{CALLER, DEFAULT_CREATE2_DEPLOYER},
     executors::{DeployResult, EvmError, ExecutionErr, Executor, RawCallResult},

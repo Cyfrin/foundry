@@ -7,7 +7,7 @@ use alloy_signer::Signer;
 use clap::Parser;
 use derive_builder::Builder;
 use eyre::Result;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use serde::Serialize;
 use std::{collections::HashMap, iter::repeat, path::PathBuf};
 

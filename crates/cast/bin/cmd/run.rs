@@ -10,7 +10,7 @@ use foundry_cli::{
 };
 use foundry_common::{is_known_system_sender, SYSTEM_TRANSACTION_TYPE};
 use foundry_compilers::artifacts::EvmVersion;
-use cyfrin_foundry_config::{find_project_root_path, Config};
+use foundry_config::{find_project_root_path, Config};
 use foundry_evm::{
     executors::{EvmError, TracingExecutor},
     opts::EvmOpts,

@@ -4,7 +4,7 @@ use crate::{
 };
 use forge_fmt::{FormatterConfig, Visitable};
 use foundry_compilers::{compilers::solc::SOLC_EXTENSIONS, utils::source_files_iter};
-use cyfrin_foundry_config::{filter::expand_globs, DocConfig};
+use foundry_config::{filter::expand_globs, DocConfig};
 use itertools::Itertools;
 use mdbook::MDBook;
 use rayon::prelude::*;

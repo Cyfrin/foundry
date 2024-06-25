@@ -1,7 +1,7 @@
 use alloy_provider::{utils::Eip1559Estimation, Provider};
 use eyre::{Result, WrapErr};
 use foundry_common::provider::{get_http_provider, RetryProvider};
-use cyfrin_foundry_config::Chain;
+use foundry_config::Chain;
 use std::{
     collections::{hash_map::Entry, HashMap},
     ops::Deref,

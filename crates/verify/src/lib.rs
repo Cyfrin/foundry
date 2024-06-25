@@ -18,7 +18,7 @@ use foundry_cli::{
 };
 use foundry_common::{compile::ProjectCompiler, ContractsByArtifact};
 use foundry_compilers::{artifacts::EvmVersion, compilers::solc::Solc, info::ContractInfo};
-use cyfrin_foundry_config::{figment, impl_figment_convert, impl_figment_convert_cast, Config, SolcReq};
+use foundry_config::{figment, impl_figment_convert, impl_figment_convert_cast, Config, SolcReq};
 use itertools::Itertools;
 use provider::VerificationProviderType;
 use reqwest::Url;

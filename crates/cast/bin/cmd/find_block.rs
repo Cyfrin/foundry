@@ -3,7 +3,7 @@ use cast::Cast;
 use clap::Parser;
 use eyre::Result;
 use foundry_cli::{opts::RpcOpts, utils};
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use futures::join;
 
 /// CLI arguments for `cast find-block`.

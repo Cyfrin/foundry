@@ -9,7 +9,7 @@ use foundry_compilers::{
     artifacts::{EvmVersion, Libraries, Settings},
     Project, ProjectCompileOutput, SolcConfig,
 };
-use cyfrin_foundry_config::{
+use foundry_config::{
     fs_permissions::PathPermission, Config, FsPermissions, FuzzConfig, FuzzDictionaryConfig,
     InvariantConfig, RpcEndpoint, RpcEndpoints,
 };

@@ -32,7 +32,7 @@ anvil-rpc = { path = "rpc" }
 anvil-server = { path = "server" }
 foundry-cli.workspace = true
 foundry-common.workspace = true
-cyfrin-foundry-config.workspace = true
+foundry-config.workspace = true
 foundry-evm.workspace = true
 
 # evm support

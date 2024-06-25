@@ -6,7 +6,7 @@ use eyre::{Context, Result};
 use foundry_block_explorers::Client;
 use foundry_cli::opts::EtherscanOpts;
 use foundry_common::fs;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use itertools::Itertools;
 use std::path::{Path, PathBuf};
 

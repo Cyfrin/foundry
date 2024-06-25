@@ -2,7 +2,7 @@ use super::{build::BuildArgs, snapshot::SnapshotArgs, test::TestArgs};
 use clap::Parser;
 use eyre::Result;
 use foundry_cli::utils::{self, FoundryPathExt};
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use std::{collections::HashSet, convert::Infallible, path::PathBuf, sync::Arc};
 use watchexec::{
     action::{Action, Outcome, PreSpawn},

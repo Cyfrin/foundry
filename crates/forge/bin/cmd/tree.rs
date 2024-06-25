@@ -23,7 +23,7 @@ pub struct TreeArgs {
     opts: ProjectPathsArgs,
 }
 
-cyfrin_foundry_config::impl_figment_convert!(TreeArgs, opts);
+foundry_config::impl_figment_convert!(TreeArgs, opts);
 
 impl TreeArgs {
     pub fn run(self) -> Result<()> {

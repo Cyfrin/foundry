@@ -4,7 +4,7 @@ use forge_fmt::{format_to, parse};
 use foundry_cli::utils::{FoundryPathExt, LoadConfig};
 use foundry_common::{fs, term::cli_warn};
 use foundry_compilers::{compilers::solc::SolcLanguage, solc::SOLC_EXTENSIONS};
-use cyfrin_foundry_config::{filter::expand_globs, impl_figment_convert_basic};
+use foundry_config::{filter::expand_globs, impl_figment_convert_basic};
 use rayon::prelude::*;
 use similar::{ChangeTag, TextDiff};
 use std::{

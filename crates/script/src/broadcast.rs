@@ -18,7 +18,7 @@ use foundry_common::{
     provider::{get_http_provider, try_get_http_provider, RetryProvider},
     shell,
 };
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use futures::{future::join_all, StreamExt};
 use itertools::Itertools;
 use std::{

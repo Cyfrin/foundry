@@ -15,7 +15,7 @@ use foundry_cli::{
     utils::{self, LoadConfig},
 };
 use foundry_common::{evm::EvmArgs, fs};
-use cyfrin_foundry_config::{
+use foundry_config::{
     figment::{
         value::{Dict, Map},
         Metadata, Profile, Provider,
@@ -32,7 +32,7 @@ use yansi::Paint;
 static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
 
 // Loads project's figment and merges the build cli arguments into it
-cyfrin_foundry_config::merge_impl_figment_convert!(Chisel, opts, evm_opts);
+foundry_config::merge_impl_figment_convert!(Chisel, opts, evm_opts);
 
 const VERSION_MESSAGE: &str = concat!(
     env!("CARGO_PKG_VERSION"),
@@ -113,7 +113,7 @@ async fn main() -> eyre::Result<()> {
     let mut dispatcher = ChiselDispatcher::new(chisel::session_source::SessionSourceConfig {
         // Enable traces if any level of verbosity was passed
         traces: config.verbosity > 0,
-        cyfrin_foundry_config: config,
+        foundry_config: config,
         no_vm: args.no_vm,
         evm_opts,
         backend: None,
@@ -233,7 +233,7 @@ impl Provider for Chisel {
         Metadata::named("Script Args Provider")
     }
 
-    fn data(&self) -> Result<Map<Profile, Dict>, cyfrin_foundry_config::figment::Error> {
+    fn data(&self) -> Result<Map<Profile, Dict>, foundry_config::figment::Error> {
         Ok(Map::from([(Config::selected_profile(), Dict::default())]))
     }
 }

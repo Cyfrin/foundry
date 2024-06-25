@@ -2,7 +2,7 @@ use clap::Parser;
 use eyre::Result;
 
 use foundry_common::fs;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use foundry_wallets::multi_wallet::MultiWalletOptsBuilder;
 
 /// CLI arguments for `cast wallet list`.

@@ -3,7 +3,7 @@ use crate::{constants::DEFAULT_CREATE2_DEPLOYER, InspectorExt};
 use alloy_json_abi::{Function, JsonAbi};
 use alloy_primitives::{Address, Selector, U256};
 use alloy_rpc_types::{Block, Transaction};
-use cyfrin_foundry_config::NamedChain;
+use foundry_config::NamedChain;
 use revm::{
     db::WrapDatabaseRef,
     handler::register::EvmHandler,

@@ -6,7 +6,7 @@ use foundry_common::evm::EvmArgs;
 use std::path::PathBuf;
 
 // Loads project's figment and merges the build cli arguments into it
-cyfrin_foundry_config::impl_figment_convert!(DebugArgs, opts, evm_opts);
+foundry_config::impl_figment_convert!(DebugArgs, opts, evm_opts);
 
 /// CLI arguments for `forge debug`.
 #[derive(Clone, Debug, Parser)]

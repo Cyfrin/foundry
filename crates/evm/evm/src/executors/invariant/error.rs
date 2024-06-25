@@ -1,7 +1,7 @@
 use super::{BasicTxDetails, InvariantContract};
 use crate::executors::RawCallResult;
 use alloy_primitives::{Address, Bytes};
-use cyfrin_foundry_config::InvariantConfig;
+use foundry_config::InvariantConfig;
 use foundry_evm_core::decode::RevertDecoder;
 use foundry_evm_fuzz::{invariant::FuzzRunIdentifiedContracts, Reason};
 use proptest::test_runner::TestError;

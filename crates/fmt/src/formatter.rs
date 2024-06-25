@@ -15,7 +15,7 @@ use crate::{
     FormatterConfig, InlineConfig, IntTypes,
 };
 use alloy_primitives::Address;
-use cyfrin_foundry_config::fmt::{HexUnderscore, MultilineFuncHeaderStyle, SingleLineBlockStyle};
+use foundry_config::fmt::{HexUnderscore, MultilineFuncHeaderStyle, SingleLineBlockStyle};
 use itertools::{Either, Itertools};
 use solang_parser::diagnostics::Diagnostic;
 use std::{fmt::Write, path::PathBuf, str::FromStr};

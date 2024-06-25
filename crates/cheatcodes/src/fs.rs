@@ -8,7 +8,7 @@ use alloy_primitives::{Bytes, U256};
 use alloy_sol_types::SolValue;
 use dialoguer::{Input, Password};
 use foundry_common::fs;
-use cyfrin_foundry_config::fs_permissions::FsAccessKind;
+use foundry_config::fs_permissions::FsAccessKind;
 use semver::Version;
 use std::{
     collections::hash_map::Entry,

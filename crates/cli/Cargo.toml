@@ -15,7 +15,7 @@ workspace = true
 [dependencies]
 forge-fmt.workspace = true
 foundry-common.workspace = true
-cyfrin-foundry-config.workspace = true
+foundry-config.workspace = true
 foundry-debugger.workspace = true
 foundry-evm.workspace = true
 foundry-wallets.workspace = true

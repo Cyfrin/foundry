@@ -1,7 +1,7 @@
 //! Contains various tests for `forge test`.
 
 use alloy_primitives::U256;
-use cyfrin_foundry_config::{Config, FuzzConfig};
+use foundry_config::{Config, FuzzConfig};
 use foundry_test_utils::{
     rpc,
     util::{OutputExt, OTHER_SOLC_VERSION, SOLC_VERSION},

@@ -709,7 +709,7 @@ mod tests {
         opts::EvmOpts,
     };
     use foundry_common::provider::get_http_provider;
-    use cyfrin_foundry_config::{Config, NamedChain};
+    use foundry_config::{Config, NamedChain};
     use std::{collections::BTreeSet, path::PathBuf};
 
     const ENDPOINT: Option<&str> = option_env!("ETH_RPC_URL");

@@ -12,7 +12,7 @@ use foundry_block_explorers::{
 use foundry_cli::utils::{self, read_constructor_args_file, LoadConfig};
 use foundry_common::{abi::encode_function_args, retry::Retry, shell};
 use foundry_compilers::{artifacts::BytecodeObject, Artifact};
-use cyfrin_foundry_config::{Chain, Config};
+use foundry_config::{Chain, Config};
 use foundry_evm::constants::DEFAULT_CREATE2_DEPLOYER;
 use futures::FutureExt;
 use once_cell::sync::Lazy;

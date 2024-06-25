@@ -2,7 +2,7 @@
 
 use crate::constants::*;
 use foundry_compilers::artifacts::{remappings::Remapping, ConfigurableContractArtifact, Metadata};
-use cyfrin_foundry_config::{
+use foundry_config::{
     parse_with_profile, BasicConfig, Chain, Config, FuzzConfig, InvariantConfig, SolidityErrorCode,
 };
 use foundry_test_utils::{

@@ -3,7 +3,7 @@ use alloy_dyn_abi::JsonAbiExt;
 use alloy_json_abi::Function;
 use alloy_primitives::{Address, Bytes, U256};
 use eyre::Result;
-use cyfrin_foundry_config::FuzzConfig;
+use foundry_config::FuzzConfig;
 use foundry_evm_core::{
     constants::MAGIC_ASSUME,
     decode::{decode_console_logs, RevertDecoder},

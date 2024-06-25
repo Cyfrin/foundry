@@ -4,7 +4,7 @@ use foundry_cli::{
     opts::Dependency,
     utils::{Git, LoadConfig},
 };
-use cyfrin_foundry_config::impl_figment_convert_basic;
+use foundry_config::impl_figment_convert_basic;
 use std::path::PathBuf;
 
 /// CLI arguments for `forge remove`.

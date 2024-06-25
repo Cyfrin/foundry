@@ -4,7 +4,7 @@ use alloy_signer::Error as SignerError;
 use alloy_signer_local::LocalSignerError;
 use alloy_sol_types::SolError;
 use foundry_common::errors::FsPathError;
-use cyfrin_foundry_config::UnresolvedEnvVarError;
+use foundry_config::UnresolvedEnvVarError;
 use foundry_evm_core::backend::DatabaseError;
 use foundry_wallets::error::WalletSignerError;
 use k256::ecdsa::signature::Error as SignatureError;

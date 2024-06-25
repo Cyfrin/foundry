@@ -1,7 +1,7 @@
 use clap::{Parser, ValueHint};
 use eyre::Result;
 use foundry_compilers::artifacts::remappings::Remapping;
-use cyfrin_foundry_config::{
+use foundry_config::{
     figment,
     figment::{
         error::Kind::InvalidType,
@@ -89,7 +89,7 @@ impl ProjectPathsArgs {
     }
 }
 
-cyfrin_foundry_config::impl_figment_convert!(ProjectPathsArgs);
+foundry_config::impl_figment_convert!(ProjectPathsArgs);
 
 // Make this args a `figment::Provider` so that it can be merged into the `Config`
 impl Provider for ProjectPathsArgs {

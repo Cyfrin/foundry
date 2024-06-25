@@ -11,7 +11,7 @@ use foundry_common::{get_contract_name, ContractsByArtifact, TestFunctionExt};
 use foundry_compilers::{
     artifacts::Libraries, compilers::Compiler, Artifact, ArtifactId, ProjectCompileOutput,
 };
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use foundry_evm::{
     backend::Backend, decode::RevertDecoder, executors::ExecutorBuilder, fork::CreateFork,
     inspectors::CheatsConfig, opts::EvmOpts, revm,

@@ -29,7 +29,7 @@ vergen = { workspace = true, default-features = false, features = [
 foundry-block-explorers = { workspace = true, features = ["foundry-compilers"] }
 foundry-common.workspace = true
 foundry-compilers = { workspace = true, features = ["full"] }
-cyfrin-foundry-config.workspace = true
+foundry-config.workspace = true
 foundry-evm.workspace = true
 foundry-wallets.workspace = true
 foundry-linking.workspace = true
@@ -139,7 +139,7 @@ openssl = ["foundry-cli/openssl", "reqwest/default-tls"]
 asm-keccak = ["alloy-primitives/asm-keccak"]
 jemalloc = ["dep:tikv-jemallocator"]
 aws-kms = ["foundry-wallets/aws-kms"]
-isolate-by-default = ["cyfrin-foundry-config/isolate-by-default"]
+isolate-by-default = ["foundry-config/isolate-by-default"]
 
 [[bench]]
 name = "test"

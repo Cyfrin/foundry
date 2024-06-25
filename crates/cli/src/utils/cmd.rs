@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::read_json_file,
     Artifact, ProjectCompileOutput,
 };
-use cyfrin_foundry_config::{error::ExtractConfigError, figment::Figment, Chain, Config, NamedChain};
+use foundry_config::{error::ExtractConfigError, figment::Figment, Chain, Config, NamedChain};
 use foundry_debugger::Debugger;
 use foundry_evm::{
     debug::DebugArena,
@@ -192,7 +192,7 @@ pub fn has_batch_support(chain_id: u64) -> bool {
 /// Helpers for loading configuration.
 ///
 /// This is usually implicitly implemented on a "&CmdArgs" struct via impl macros defined in
-/// `forge_config` (see [`cyfrin_foundry_config::impl_figment_convert`] for more details) and the impl
+/// `forge_config` (see [`foundry_config::impl_figment_convert`] for more details) and the impl
 /// definition on `T: Into<Config> + Into<Figment>` below.
 ///
 /// Each function also has an `emit_warnings` form which does the same thing as its counterpart but

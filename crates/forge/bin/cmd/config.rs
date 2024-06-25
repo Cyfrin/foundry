@@ -3,9 +3,9 @@ use clap::Parser;
 use eyre::Result;
 use foundry_cli::utils::LoadConfig;
 use foundry_common::{evm::EvmArgs, term::cli_warn};
-use cyfrin_foundry_config::fix::fix_tomls;
+use foundry_config::fix::fix_tomls;
 
-cyfrin_foundry_config::impl_figment_convert!(ConfigArgs, opts, evm_opts);
+foundry_config::impl_figment_convert!(ConfigArgs, opts, evm_opts);
 
 /// CLI arguments for `forge config`.
 #[derive(Clone, Debug, Parser)]

@@ -9,7 +9,7 @@ use foundry_cli::{
     utils::{self, parse_ether_value},
 };
 use foundry_common::ens::NameOrAddress;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use std::str::FromStr;
 
 /// CLI arguments for `cast estimate`.

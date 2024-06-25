@@ -10,7 +10,7 @@ use alloy_dyn_abi::{DecodedEvent, DynSolValue, EventExt};
 use alloy_json_abi::Event;
 use alloy_primitives::{address, Address, U256};
 use forge::result::TestStatus;
-use cyfrin_foundry_config::{fs_permissions::PathPermission, Config, FsPermissions};
+use foundry_config::{fs_permissions::PathPermission, Config, FsPermissions};
 use foundry_evm::{
     constants::HARDHAT_CONSOLE_ADDRESS,
     traces::{CallKind, CallTraceDecoder, DecodedCallData, TraceKind},

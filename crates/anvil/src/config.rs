@@ -29,7 +29,7 @@ use anvil_server::ServerConfig;
 use foundry_common::{
     provider::ProviderBuilder, ALCHEMY_FREE_TIER_CUPS, NON_ARCHIVE_NODE_WARNING, REQUEST_TIMEOUT,
 };
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use foundry_evm::{
     constants::DEFAULT_CREATE2_DEPLOYER,
     fork::{BlockchainDb, BlockchainDbMeta, SharedBackend},

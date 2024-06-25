@@ -15,7 +15,7 @@ use alloy_provider::{
 use alloy_rpc_client::ClientBuilder;
 use alloy_transport::utils::guess_local_url;
 use eyre::{Result, WrapErr};
-use cyfrin_foundry_config::NamedChain;
+use foundry_config::NamedChain;
 use reqwest::Url;
 use runtime_transport::RuntimeTransport;
 use std::{

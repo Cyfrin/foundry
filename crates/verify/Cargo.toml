@@ -14,7 +14,7 @@ repository.workspace = true
 workspace = true
 
 [dependencies]
-cyfrin-foundry-config.workspace = true
+foundry-config.workspace = true
 foundry-cli.workspace = true
 foundry-common.workspace = true
 foundry-evm.workspace = true

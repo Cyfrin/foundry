@@ -171,7 +171,7 @@ pub fn fix_tomls() -> Vec<Warning> {
             tomls.push(global_toml);
         }
         let local_toml = PathBuf::from(
-            Env::var("cyfrin_foundry_config").unwrap_or_else(|| Config::FILE_NAME.to_string()),
+            Env::var("FOUNDRY_CONFIG").unwrap_or_else(|| Config::FILE_NAME.to_string()),
         );
         if local_toml.exists() {
             tomls.push(local_toml);

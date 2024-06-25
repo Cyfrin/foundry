@@ -8,7 +8,7 @@ use foundry_cli::{
     utils::{self, get_provider},
 };
 use foundry_common::ens::NameOrAddress;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use std::str::FromStr;
 
 /// CLI arguments for `cast mktx`.

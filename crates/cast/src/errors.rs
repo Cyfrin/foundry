@@ -1,6 +1,6 @@
 //! Errors for this crate
 
-use cyfrin_foundry_config::Chain;
+use foundry_config::Chain;
 use std::fmt;
 
 /// An error thrown when resolving a function via signature failed

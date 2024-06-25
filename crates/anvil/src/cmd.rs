@@ -9,7 +9,7 @@ use alloy_signer_local::coins_bip39::{English, Mnemonic};
 use anvil_server::ServerConfig;
 use clap::Parser;
 use core::fmt;
-use cyfrin_foundry_config::{Chain, Config, FigmentProviders};
+use foundry_config::{Chain, Config, FigmentProviders};
 use futures::FutureExt;
 use rand::{rngs::StdRng, SeedableRng};
 use std::{

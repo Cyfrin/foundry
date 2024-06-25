@@ -65,7 +65,7 @@ impl fmt::Display for Warning {
                 f,
                 "No local TOML found to fix at {}.\n\
                  Change the current directory to a project path or set the foundry.toml path with \
-                 the `cyfrin_foundry_config` environment variable",
+                 the `FOUNDRY_CONFIG` environment variable",
                 path.display()
             ),
 

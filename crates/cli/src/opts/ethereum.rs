@@ -1,7 +1,7 @@
 use crate::opts::ChainValueParser;
 use clap::Parser;
 use eyre::Result;
-use cyfrin_foundry_config::{
+use foundry_config::{
     figment::{
         self,
         value::{Dict, Map},

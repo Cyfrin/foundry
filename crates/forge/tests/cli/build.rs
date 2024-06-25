@@ -1,5 +1,5 @@
 use foundry_common::fs::read_json_file;
-use cyfrin_foundry_config::Config;
+use foundry_config::Config;
 use foundry_test_utils::forgetest;
 use globset::Glob;
 use std::{collections::BTreeMap, path::PathBuf};

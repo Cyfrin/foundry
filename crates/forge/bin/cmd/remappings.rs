@@ -1,7 +1,7 @@
 use clap::{Parser, ValueHint};
 use eyre::Result;
 use foundry_cli::utils::LoadConfig;
-use cyfrin_foundry_config::impl_figment_convert_basic;
+use foundry_config::impl_figment_convert_basic;
 use std::{collections::BTreeMap, path::PathBuf};
 
 /// CLI arguments for `forge remappings`.

@@ -5,7 +5,7 @@ use super::{
 use crate::executors::{Executor, RawCallResult};
 use alloy_dyn_abi::JsonAbiExt;
 use eyre::Result;
-use cyfrin_foundry_config::InvariantConfig;
+use foundry_config::InvariantConfig;
 use foundry_evm_core::utils::StateChangeset;
 use foundry_evm_fuzz::{
     invariant::{BasicTxDetails, FuzzRunIdentifiedContracts, InvariantContract},

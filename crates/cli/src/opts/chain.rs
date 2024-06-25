@@ -1,6 +1,6 @@
 use clap::builder::{PossibleValuesParser, TypedValueParser};
 use eyre::Result;
-use cyfrin_foundry_config::{Chain, NamedChain};
+use foundry_config::{Chain, NamedChain};
 use std::ffi::OsStr;
 use strum::VariantNames;
 

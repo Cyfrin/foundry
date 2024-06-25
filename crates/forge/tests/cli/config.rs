@@ -6,7 +6,7 @@ use foundry_compilers::{
     artifacts::{BytecodeHash, OptimizerDetails, RevertStrings, YulDetails},
     solc::Solc,
 };
-use cyfrin_foundry_config::{
+use foundry_config::{
     cache::{CachedChains, CachedEndpoints, StorageCachingConfig},
     fs_permissions::{FsAccessPermission, PathPermission},
     Config, FsPermissions, FuzzConfig, InvariantConfig, SolcReq,

@@ -2,7 +2,7 @@ use clap::{Parser, ValueHint};
 use eyre::{Result, WrapErr};
 use foundry_cli::utils::LoadConfig;
 use foundry_compilers::{resolver::parse::SolData, Graph};
-use cyfrin_foundry_config::{impl_figment_convert_basic, Config};
+use foundry_config::{impl_figment_convert_basic, Config};
 use itertools::Itertools;
 use rayon::prelude::*;
 use std::path::PathBuf;

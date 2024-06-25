@@ -13,7 +13,7 @@ use crate::{
 use alloy_json_abi::JsonAbi;
 use alloy_primitives::{hex, Address};
 use forge_fmt::FormatterConfig;
-use cyfrin_foundry_config::{Config, RpcEndpoint};
+use foundry_config::{Config, RpcEndpoint};
 use foundry_evm::{
     decode::decode_console_logs,
     traces::{
@@ -157,7 +157,7 @@ impl ChiselDispatcher {
     fn format_source(&self) -> eyre::Result<String> {
         format_source(
             &self.source().to_repl_source(),
-            self.source().config.cyfrin_foundry_config.fmt.clone(),
+            self.source().config.foundry_config.fmt.clone(),
         )
     }
 
@@ -350,7 +350,7 @@ impl ChiselDispatcher {
                 // `[rpc_endpoints]` section of the `foundry.toml` within
                 // the pwd, use the URL matched to the key.
                 let endpoint = if let Some(endpoint) =
-                    self.source_mut().config.cyfrin_foundry_config.rpc_endpoints.get(arg)
+                    self.source_mut().config.foundry_config.rpc_endpoints.get(arg)
                 {
                     endpoint.clone()
                 } else {
@@ -497,7 +497,7 @@ impl ChiselDispatcher {
                     "https://api.etherscan.io/api?module=contract&action=getabi&address={}{}",
                     args[0],
                     if let Some(api_key) =
-                        self.source().config.cyfrin_foundry_config.etherscan_api_key.as_ref()
+                        self.source().config.foundry_config.etherscan_api_key.as_ref()
                     {
                         format!("&apikey={api_key}")
                     } else {
@@ -897,12 +897,12 @@ impl ChiselDispatcher {
             .with_labels(result.labeled_addresses.clone())
             .with_signature_identifier(SignaturesIdentifier::new(
                 Config::foundry_cache_dir(),
-                session_config.cyfrin_foundry_config.offline,
+                session_config.foundry_config.offline,
             )?)
             .build();
 
         let mut identifier = TraceIdentifiers::new().with_etherscan(
-            &session_config.cyfrin_foundry_config,
+            &session_config.foundry_config,
             session_config.evm_opts.get_remote_chain_id().await,
         )?;
         if !identifier.is_empty() {
