@@ -14,7 +14,7 @@ use foundry_compilers::{
     info::ContractInfo,
     Artifact,
 };
-use foundry_config::{figment, filter::SkipBuildFilter, impl_figment_convert, Chain, Config};
+use cyfrin_foundry_config::{figment, filter::SkipBuildFilter, impl_figment_convert, Chain, Config};
 use foundry_evm::{
     constants::DEFAULT_CREATE2_DEPLOYER, executors::TracingExecutor, utils::configure_tx_env,
 };

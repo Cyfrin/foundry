@@ -7,7 +7,7 @@ use crate::{
 use alloy_primitives::Address;
 use anvil::{spawn, NodeConfig};
 use foundry_compilers::artifacts::{remappings::Remapping, BytecodeHash};
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use foundry_test_utils::{
     forgetest, forgetest_async,
     util::{OutputExt, TestCommand, TestProject},

@@ -10,7 +10,7 @@ use foundry_cli::{
 };
 use foundry_common::ens::NameOrAddress;
 use foundry_compilers::artifacts::EvmVersion;
-use foundry_config::{find_project_root_path, Config};
+use cyfrin_foundry_config::{find_project_root_path, Config};
 use foundry_evm::{executors::TracingExecutor, opts::EvmOpts};
 use std::str::FromStr;
 

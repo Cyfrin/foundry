@@ -7,7 +7,7 @@ use crate::fork::{BackendHandler, BlockchainDb, BlockchainDbMeta, CreateFork, Sh
 use foundry_common::provider::{
     runtime_transport::RuntimeTransport, tower::RetryBackoffService, ProviderBuilder, RetryProvider,
 };
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use futures::{
     channel::mpsc::{channel, Receiver, Sender},
     stream::{Fuse, Stream},

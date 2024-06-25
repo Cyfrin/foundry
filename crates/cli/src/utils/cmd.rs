@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::read_json_file,
     Artifact, ProjectCompileOutput,
 };
-use foundry_config::{error::ExtractConfigError, figment::Figment, Chain, Config, NamedChain};
+use cyfrin_foundry_config::{error::ExtractConfigError, figment::Figment, Chain, Config, NamedChain};
 use foundry_debugger::Debugger;
 use foundry_evm::{
     debug::DebugArena,

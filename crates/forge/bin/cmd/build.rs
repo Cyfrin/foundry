@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::source_files_iter,
     Project, ProjectCompileOutput,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment::{
         self,
         error::Kind::InvalidType,
@@ -21,7 +21,7 @@ use serde::Serialize;
 use std::path::PathBuf;
 use watchexec::config::{InitConfig, RuntimeConfig};
 
-foundry_config::merge_impl_figment_convert!(BuildArgs, args);
+cyfrin_foundry_config::merge_impl_figment_convert!(BuildArgs, args);
 
 /// CLI arguments for `forge build`.
 ///
@@ -33,7 +33,7 @@ foundry_config::merge_impl_figment_convert!(BuildArgs, args);
 ///
 /// ```
 /// use foundry_cli::cmd::forge::build::BuildArgs;
-/// use foundry_config::Config;
+/// use cyfrin_foundry_config::Config;
 /// # fn t(args: BuildArgs) {
 /// let config = Config::from(&args);
 /// # }
@@ -164,7 +164,7 @@ impl Provider for BuildArgs {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::filter::SkipBuildFilter;
+    use cyfrin_foundry_config::filter::SkipBuildFilter;
 
     #[test]
     fn can_parse_build_filters() {

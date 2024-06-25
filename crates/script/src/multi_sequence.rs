@@ -3,7 +3,7 @@ use eyre::{ContextCompat, Result, WrapErr};
 use foundry_cli::utils::now;
 use foundry_common::fs;
 use foundry_compilers::ArtifactId;
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use serde::{Deserialize, Serialize};
 use std::{
     io::{BufWriter, Write},

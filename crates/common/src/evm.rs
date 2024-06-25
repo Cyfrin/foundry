@@ -2,7 +2,7 @@
 use alloy_primitives::{Address, B256, U256};
 use clap::{ArgAction, Parser};
 use eyre::ContextCompat;
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment::{
         self,
         error::Kind::InvalidType,
@@ -30,7 +30,7 @@ pub type Breakpoints = FxHashMap<char, (Address, usize)>;
 /// # Example
 ///
 /// ```ignore
-/// use foundry_config::Config;
+/// use cyfrin_foundry_config::Config;
 /// use forge::executor::opts::EvmOpts;
 /// use foundry_common::evm::EvmArgs;
 /// # fn t(args: EvmArgs) {
@@ -293,7 +293,7 @@ fn id<S: serde::Serializer>(chain: &Option<Chain>, s: S) -> Result<S::Ok, S::Err
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::NamedChain;
+    use cyfrin_foundry_config::NamedChain;
 
     #[test]
     fn can_parse_chain_id() {

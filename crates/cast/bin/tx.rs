@@ -12,7 +12,7 @@ use foundry_cli::{
     utils::{self, parse_function_args},
 };
 use foundry_common::ens::NameOrAddress;
-use foundry_config::{Chain, Config};
+use cyfrin_foundry_config::{Chain, Config};
 
 /// Prevents a misconfigured hwlib from sending a transaction that defies user-specified --from
 pub fn validate_from_address(

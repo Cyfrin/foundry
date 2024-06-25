@@ -1,4 +1,4 @@
-//! # foundry-config
+//! # cyfrin-foundry-config
 //!
 //! Foundry configuration.
 
@@ -429,7 +429,7 @@ pub struct Config {
     /// _always_ be done using a public constructor or update syntax:
     ///
     /// ```ignore
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     ///
     /// let config = Config { src: "other".into(), ..Default::default() };
     /// ```
@@ -518,7 +518,7 @@ impl Config {
     ///
     /// ```no_run
     /// use figment::providers::{Env, Format, Toml};
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     ///
     /// // Use foundry's default `Figment`, but allow values from `other.toml`
     /// // to supersede its values.
@@ -538,7 +538,7 @@ impl Config {
     ///
     /// ```rust
     /// use figment::providers::{Env, Format, Toml};
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     ///
     /// // Use foundry's default `Figment`, but allow values from `other.toml`
     /// // to supersede its values.
@@ -775,7 +775,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// let config = Config::load_with_root(".").sanitized();
     /// let project = config.project();
     /// ```
@@ -913,7 +913,7 @@ impl Config {
     ///
     /// ```
     /// use foundry_compilers::solc::Solc;
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// let config = Config::load_with_root(".").sanitized();
     /// let paths = config.project_paths::<Solc>();
     /// ```
@@ -998,7 +998,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let rpc_jwt = config.get_rpc_jwt_secret().unwrap().unwrap();
@@ -1017,7 +1017,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let rpc_url = config.get_rpc_url().unwrap().unwrap();
@@ -1041,7 +1041,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let rpc_url = config.get_rpc_url_with_alias("mainnet").unwrap().unwrap();
@@ -1060,7 +1060,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let rpc_url = config.get_rpc_url_or("http://localhost:8545").unwrap();
@@ -1082,7 +1082,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let rpc_url = config.get_rpc_url_or_localhost_http().unwrap();
@@ -1104,7 +1104,7 @@ impl Config {
     /// # Example
     ///
     /// ```
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// # fn t() {
     /// let config = Config::with_root("./");
     /// let etherscan_config = config.get_etherscan_config().unwrap().unwrap();
@@ -1323,7 +1323,7 @@ impl Config {
     /// # Example
     ///
     /// ```rust
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// use serde::Deserialize;
     ///
     /// let my_config = Config::figment().extract::<Config>();
@@ -1338,7 +1338,7 @@ impl Config {
     /// # Example
     ///
     /// ```rust
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// use serde::Deserialize;
     ///
     /// let my_config = Config::figment_with_root(".").extract::<Config>();
@@ -1352,7 +1352,7 @@ impl Config {
     /// # Example
     ///
     /// ```rust
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// let my_config = Config::with_root(".");
     /// ```
     pub fn with_root(root: impl Into<PathBuf>) -> Self {
@@ -1400,7 +1400,7 @@ impl Config {
     /// # Example
     ///
     /// ```rust
-    /// use foundry_config::Config;
+    /// use cyfrin_foundry_config::Config;
     /// let my_config = Config::with_root(".").into_basic();
     /// ```
     pub fn into_basic(self) -> BasicConfig {
@@ -2746,7 +2746,7 @@ impl<P: Provider> ProviderExt for P {}
 /// # Example
 ///
 /// ```rust
-/// use foundry_config::{BasicConfig, Config};
+/// use cyfrin_foundry_config::{BasicConfig, Config};
 /// use serde::Deserialize;
 ///
 /// let my_config = Config::figment().extract::<BasicConfig>();

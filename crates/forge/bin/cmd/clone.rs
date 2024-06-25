@@ -18,7 +18,7 @@ use foundry_compilers::{
     compilers::solc::Solc,
     ProjectCompileOutput, ProjectPathsConfig,
 };
-use foundry_config::{Chain, Config};
+use cyfrin_foundry_config::{Chain, Config};
 use std::{
     fs::read_dir,
     path::{Path, PathBuf},

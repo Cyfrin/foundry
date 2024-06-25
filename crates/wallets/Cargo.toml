@@ -13,7 +13,7 @@ repository.workspace = true
 workspace = true
 
 [dependencies]
-foundry-config.workspace = true
+cyfrin-foundry-config.workspace = true
 
 alloy-primitives.workspace = true
 alloy-signer = { workspace = true, features = ["eip712"] }

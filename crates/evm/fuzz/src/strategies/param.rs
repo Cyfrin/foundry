@@ -208,7 +208,7 @@ mod tests {
         FuzzFixtures,
     };
     use foundry_common::abi::get_func;
-    use foundry_config::FuzzDictionaryConfig;
+    use cyfrin_foundry_config::FuzzDictionaryConfig;
     use revm::db::{CacheDB, EmptyDB};
 
     #[test]
