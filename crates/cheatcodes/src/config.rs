@@ -3,7 +3,7 @@ use crate::{script::ScriptWallets, Vm::Rpc};
 use alloy_primitives::Address;
 use foundry_common::{fs::normalize_path, ContractsByArtifact};
 use foundry_compilers::{utils::canonicalize, ProjectPathsConfig};
-use foundry_config::{
+use cyfrin_foundry_config::{
     cache::StorageCachingConfig, fs_permissions::FsAccessKind, Config, FsPermissions,
     ResolvedRpcEndpoints,
 };
@@ -224,7 +224,7 @@ impl Default for CheatsConfig {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::fs_permissions::PathPermission;
+    use cyfrin_foundry_config::fs_permissions::PathPermission;
 
     fn config(root: &str, fs_permissions: FsPermissions) -> CheatsConfig {
         CheatsConfig::new(

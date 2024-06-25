@@ -26,7 +26,7 @@ use foundry_common::{
     shell, ContractsByArtifact, CONTRACT_MAX_SIZE, SELECTOR_LEN,
 };
 use foundry_compilers::ArtifactId;
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment,
     figment::{
         value::{Dict, Map},
@@ -65,7 +65,7 @@ mod transaction;
 mod verify;
 
 // Loads project's figment and merges the build cli arguments into it
-foundry_config::merge_impl_figment_convert!(ScriptArgs, opts, evm_opts);
+cyfrin_foundry_config::merge_impl_figment_convert!(ScriptArgs, opts, evm_opts);
 
 /// CLI arguments for `forge script`.
 #[derive(Clone, Debug, Default, Parser)]
@@ -605,7 +605,7 @@ impl ScriptConfig {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::{NamedChain, UnresolvedEnvVarError};
+    use cyfrin_foundry_config::{NamedChain, UnresolvedEnvVarError};
     use std::fs;
     use tempfile::tempdir;
 

@@ -22,7 +22,7 @@ use foundry_compilers::{
     artifacts::{sourcemap::SourceMap, CompactBytecode, CompactDeployedBytecode},
     Artifact, ArtifactId, Project, ProjectCompileOutput,
 };
-use foundry_config::{Config, SolcReq};
+use cyfrin_foundry_config::{Config, SolcReq};
 use rayon::prelude::*;
 use rustc_hash::FxHashMap;
 use semver::Version;
@@ -30,7 +30,7 @@ use std::{collections::HashMap, path::PathBuf, sync::Arc};
 use yansi::Paint;
 
 // Loads project's figment and merges the build cli arguments into it
-foundry_config::impl_figment_convert!(CoverageArgs, test);
+cyfrin_foundry_config::impl_figment_convert!(CoverageArgs, test);
 
 /// CLI arguments for `forge coverage`.
 #[derive(Clone, Debug, Parser)]

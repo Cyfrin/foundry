@@ -12,7 +12,7 @@ use foundry_compilers::{
     solc::Solc,
     Graph, Project,
 };
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use semver::Version;
 use std::{fmt, path::PathBuf, str::FromStr};
 

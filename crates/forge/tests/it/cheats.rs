@@ -7,7 +7,7 @@ use crate::{
         TEST_DATA_MULTI_VERSION,
     },
 };
-use foundry_config::{fs_permissions::PathPermission, FsPermissions};
+use cyfrin_foundry_config::{fs_permissions::PathPermission, FsPermissions};
 use foundry_test_utils::Filter;
 
 /// Executes all cheat code tests but not fork cheat codes or tests that require isolation mode

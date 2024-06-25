@@ -13,7 +13,7 @@ use foundry_cli::{
     utils,
 };
 use foundry_common::{cli_warn, ens::NameOrAddress};
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use std::{path::PathBuf, str::FromStr};
 
 /// CLI arguments for `cast send`.

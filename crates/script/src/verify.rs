@@ -6,7 +6,7 @@ use forge_verify::{RetryArgs, VerifierArgs, VerifyArgs};
 use foundry_cli::opts::{EtherscanOpts, ProjectPathsArgs};
 use foundry_common::ContractsByArtifact;
 use foundry_compilers::{info::ContractInfo, Project};
-use foundry_config::{Chain, Config};
+use cyfrin_foundry_config::{Chain, Config};
 use semver::Version;
 
 /// State after we have broadcasted the script.

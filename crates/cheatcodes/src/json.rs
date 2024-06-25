@@ -5,7 +5,7 @@ use alloy_dyn_abi::{DynSolType, DynSolValue};
 use alloy_primitives::{Address, B256, I256};
 use alloy_sol_types::SolValue;
 use foundry_common::fs;
-use foundry_config::fs_permissions::FsAccessKind;
+use cyfrin_foundry_config::fs_permissions::FsAccessKind;
 use serde_json::Value;
 use std::{borrow::Cow, collections::BTreeMap, fmt::Write};
 

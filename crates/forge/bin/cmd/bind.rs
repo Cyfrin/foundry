@@ -6,7 +6,7 @@ use eyre::{Result, WrapErr};
 use forge_sol_macro_gen::{MultiSolMacroGen, SolMacroGen};
 use foundry_cli::{opts::CoreBuildArgs, utils::LoadConfig};
 use foundry_common::{compile::ProjectCompiler, fs::json_files};
-use foundry_config::impl_figment_convert;
+use cyfrin_foundry_config::impl_figment_convert;
 use regex::Regex;
 use std::{
     fs,

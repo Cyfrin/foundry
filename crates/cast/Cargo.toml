@@ -29,7 +29,7 @@ vergen = { workspace = true, default-features = false, features = [
 foundry-block-explorers.workspace = true
 foundry-common.workspace = true
 foundry-compilers.workspace = true
-foundry-config.workspace = true
+cyfrin-foundry-config.workspace = true
 foundry-evm.workspace = true
 foundry-wallets.workspace = true
 
@@ -97,7 +97,7 @@ openssl = ["foundry-cli/openssl"]
 asm-keccak = ["alloy-primitives/asm-keccak"]
 jemalloc = ["dep:tikv-jemallocator"]
 aws-kms = ["foundry-wallets/aws-kms", "dep:aws-sdk-kms"]
-isolate-by-default = ["foundry-config/isolate-by-default"]
+isolate-by-default = ["cyfrin-foundry-config/isolate-by-default"]
 
 [[bench]]
 name = "vanity"

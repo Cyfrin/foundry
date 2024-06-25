@@ -154,7 +154,7 @@ impl ProjectCompiler {
     ///
     /// ```ignore
     /// use foundry_common::compile::ProjectCompiler;
-    /// let config = foundry_config::Config::load();
+    /// let config = cyfrin_foundry_config::Config::load();
     /// let prj = config.project().unwrap();
     /// ProjectCompiler::new().compile_with(|| Ok(prj.compile()?)).unwrap();
     /// ```

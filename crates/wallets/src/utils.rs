@@ -4,7 +4,7 @@ use alloy_signer_ledger::HDPath as LedgerHDPath;
 use alloy_signer_local::PrivateKeySigner;
 use alloy_signer_trezor::HDPath as TrezorHDPath;
 use eyre::{Context, Result};
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use hex::FromHex;
 use std::{
     fs,

@@ -2,13 +2,13 @@
 name = "cyfrin-foundry-config"
 description = "Foundry configuration"
 
-version.workspace = true
-edition.workspace = true
-rust-version.workspace = true
-authors.workspace = true
-license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+version = "0.2.1"  # Updated version
+edition = "2021"
+rust-version = "1.79"
+authors = ["Foundry Contributors", "Alex Roan <alex@cyfrin.io>"]
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/Cyfrin/foundry"
+repository = "https://github.com/Cyfrin/foundry"
 
 [lints]
 workspace = true

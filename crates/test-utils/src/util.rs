@@ -8,7 +8,7 @@ use foundry_compilers::{
     project_util::{copy_dir, TempProject},
     ArtifactOutput, ConfigurableArtifacts, PathStyle, ProjectPathsConfig,
 };
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use once_cell::sync::Lazy;
 use parking_lot::Mutex;
 use regex::Regex;

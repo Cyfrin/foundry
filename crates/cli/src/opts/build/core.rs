@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::canonicalized,
     Project,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment,
     figment::{
         error::Kind::InvalidType,

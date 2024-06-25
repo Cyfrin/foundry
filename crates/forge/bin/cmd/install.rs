@@ -6,7 +6,7 @@ use foundry_cli::{
     utils::{CommandUtils, Git, LoadConfig},
 };
 use foundry_common::fs;
-use foundry_config::{impl_figment_convert_basic, Config};
+use cyfrin_foundry_config::{impl_figment_convert_basic, Config};
 use once_cell::sync::Lazy;
 use regex::Regex;
 use semver::Version;

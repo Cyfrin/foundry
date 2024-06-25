@@ -18,7 +18,7 @@
 //! use forge::executor::opts::EvmOpts;
 //! use foundry_cli::cmd::forge::build::BuildArgs;
 //! use foundry_common::evm::EvmArgs;
-//! use foundry_config::{figment::Figment, *};
+//! use cyfrin_foundry_config::{figment::Figment, *};
 //!
 //! // A new clap subcommand that accepts both `EvmArgs` and `BuildArgs`
 //! #[derive(Clone, Debug, Parser)]
@@ -30,7 +30,7 @@
 //! }
 //!
 //! // add `Figment` and `Config` converters
-//! foundry_config::impl_figment_convert!(MyArgs, opts, evm_opts);
+//! cyfrin_foundry_config::impl_figment_convert!(MyArgs, opts, evm_opts);
 //! let args = MyArgs::parse_from(["build"]);
 //!
 //! let figment: Figment = From::from(&args);
