@@ -24,7 +24,7 @@ use foundry_compilers::{
     compilers::{multi::MultiCompilerLanguage, CompilerSettings, Language},
     utils::source_files_iter,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment,
     figment::{
         value::{Dict, Map},
@@ -52,7 +52,7 @@ pub use filter::FilterArgs;
 use forge::traces::render_trace_arena;
 
 // Loads project's figment and merges the build cli arguments into it
-foundry_config::merge_impl_figment_convert!(TestArgs, opts, evm_opts);
+cyfrin_foundry_config::merge_impl_figment_convert!(TestArgs, opts, evm_opts);
 
 /// CLI arguments for `forge test`.
 #[derive(Clone, Debug, Parser)]
@@ -649,7 +649,7 @@ fn list(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::{Chain, InvariantConfig};
+    use cyfrin_foundry_config::{Chain, InvariantConfig};
     use foundry_test_utils::forgetest_async;
 
     #[test]

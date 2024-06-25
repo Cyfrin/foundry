@@ -5,7 +5,7 @@
 extern crate tracing;
 
 use foundry_compilers::ProjectCompileOutput;
-use foundry_config::{
+use cyfrin_foundry_config::{
     validate_profiles, Config, FuzzConfig, InlineConfig, InlineConfigError, InlineConfigParser,
     InvariantConfig, NatSpec,
 };

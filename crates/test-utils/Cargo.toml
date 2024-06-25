@@ -17,7 +17,7 @@ workspace = true
 [dependencies]
 foundry-common.workspace = true
 foundry-compilers = { workspace = true, features = ["project-util"] }
-foundry-config.workspace = true
+cyfrin-foundry-config.workspace = true
 
 alloy-primitives.workspace = true
 alloy-provider.workspace = true

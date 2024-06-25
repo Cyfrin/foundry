@@ -26,7 +26,7 @@ use foundry_compilers::{
     },
     Artifact, Project,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment::{self, value::Dict, Metadata, Profile},
     impl_figment_convert_cast, Config,
 };

@@ -20,7 +20,7 @@ use foundry_common::{
         SelectorType,
     },
 };
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use std::time::Instant;
 
 pub mod cmd;

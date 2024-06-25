@@ -151,7 +151,7 @@ impl SessionSource {
                 match source_without_inspector.execute().await {
                     Ok((_, res)) => (res, Some(err)),
                     Err(_) => {
-                        if self.config.foundry_config.verbosity >= 3 {
+                        if self.config.cyfrin_foundry_config.verbosity >= 3 {
                             eprintln!("Could not inspect: {err}");
                         }
                         return Ok((true, None))
@@ -179,7 +179,7 @@ impl SessionSource {
             }
 
             // we were unable to check the event
-            if self.config.foundry_config.verbosity >= 3 {
+            if self.config.cyfrin_foundry_config.verbosity >= 3 {
                 eprintln!("Failed eval: {err}");
             }
 
@@ -292,7 +292,7 @@ impl SessionSource {
         let backend = match self.config.backend.take() {
             Some(backend) => backend,
             None => {
-                let fork = self.config.evm_opts.get_fork(&self.config.foundry_config, env.clone());
+                let fork = self.config.evm_opts.get_fork(&self.config.cyfrin_foundry_config, env.clone());
                 let backend = Backend::spawn(fork);
                 self.config.backend = Some(backend.clone());
                 backend
@@ -304,7 +304,7 @@ impl SessionSource {
             .inspectors(|stack| {
                 stack.chisel_state(final_pc).trace(true).cheatcodes(
                     CheatsConfig::new(
-                        &self.config.foundry_config,
+                        &self.config.cyfrin_foundry_config,
                         self.config.evm_opts.clone(),
                         None,
                         None,
@@ -314,7 +314,7 @@ impl SessionSource {
                 )
             })
             .gas_limit(self.config.evm_opts.gas_limit())
-            .spec(self.config.foundry_config.evm_spec_id())
+            .spec(self.config.cyfrin_foundry_config.evm_spec_id())
             .build(env, backend);
 
         // Create a [ChiselRunner] with a default balance of [U256::MAX] and

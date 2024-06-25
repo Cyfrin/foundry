@@ -10,7 +10,7 @@ use foundry_compilers::{
     artifacts::{CompilerOutput, Settings, SolcInput, Source, Sources},
     compilers::solc::Solc,
 };
-use foundry_config::{Config, SolcReq};
+use cyfrin_foundry_config::{Config, SolcReq};
 use foundry_evm::{backend::Backend, opts::EvmOpts};
 use semver::Version;
 use serde::{Deserialize, Serialize};
@@ -69,7 +69,7 @@ pub struct GeneratedOutput {
 #[derive(Clone, Debug, Default, Serialize, Deserialize)]
 pub struct SessionSourceConfig {
     /// Foundry configuration
-    pub foundry_config: Config,
+    pub cyfrin_foundry_config: Config,
     /// EVM Options
     pub evm_opts: EvmOpts,
     /// Disable the default `Vm` import.
@@ -91,12 +91,12 @@ impl SessionSourceConfig {
     /// - Latest installed version via SVM
     /// - Default: Latest 0.8.19
     pub(crate) fn solc(&self) -> Result<Solc> {
-        let solc_req = if let Some(solc_req) = self.foundry_config.solc.clone() {
+        let solc_req = if let Some(solc_req) = self.cyfrin_foundry_config.solc.clone() {
             solc_req
         } else if let Some(version) = Solc::installed_versions().into_iter().max() {
             SolcReq::Version(version)
         } else {
-            if !self.foundry_config.offline {
+            if !self.cyfrin_foundry_config.offline {
                 print!("{}", "No solidity versions installed! ".green());
             }
             // use default
@@ -106,7 +106,7 @@ impl SessionSourceConfig {
         match solc_req {
             SolcReq::Version(version) => {
                 // Validate that the requested evm version is supported by the solc version
-                let req_evm_version = self.foundry_config.evm_version;
+                let req_evm_version = self.cyfrin_foundry_config.evm_version;
                 if let Some(compat_evm_version) = req_evm_version.normalize_version_solc(&version) {
                     if req_evm_version > compat_evm_version {
                         eyre::bail!(
@@ -118,7 +118,7 @@ impl SessionSourceConfig {
                 let solc = if let Some(solc) = Solc::find_svm_installed_version(&version)? {
                     solc
                 } else {
-                    if self.foundry_config.offline {
+                    if self.cyfrin_foundry_config.offline {
                         eyre::bail!("can't install missing solc {version} in offline mode")
                     }
                     println!("{}", format!("Installing solidity version {version}...").green());
@@ -312,7 +312,7 @@ impl SessionSource {
         let mut sources = Sources::new();
         sources.insert(self.file_name.clone(), Source::new(self.to_repl_source()));
 
-        let remappings = self.config.foundry_config.get_all_remappings().collect::<Vec<_>>();
+        let remappings = self.config.cyfrin_foundry_config.get_all_remappings().collect::<Vec<_>>();
 
         // Include Vm.sol if forge-std remapping is not available
         if !self.config.no_vm && !remappings.iter().any(|r| r.name.starts_with("forge-std")) {
@@ -321,7 +321,7 @@ impl SessionSource {
 
         let settings = Settings {
             remappings,
-            evm_version: Some(self.config.foundry_config.evm_version),
+            evm_version: Some(self.config.cyfrin_foundry_config.evm_version),
             ..Default::default()
         };
 

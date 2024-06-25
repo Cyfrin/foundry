@@ -11,7 +11,7 @@ use forge_verify::provider::VerificationProviderType;
 use foundry_cli::utils::{now, Git};
 use foundry_common::{fs, shell, SELECTOR_LEN};
 use foundry_compilers::ArtifactId;
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use serde::{Deserialize, Serialize};
 use std::{
     collections::{HashMap, VecDeque},

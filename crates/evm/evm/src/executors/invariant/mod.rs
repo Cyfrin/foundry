@@ -6,7 +6,7 @@ use alloy_primitives::{Address, Bytes, FixedBytes, Selector, U256};
 use alloy_sol_types::{sol, SolCall};
 use eyre::{eyre, ContextCompat, Result};
 use foundry_common::contracts::{ContractsByAddress, ContractsByArtifact};
-use foundry_config::InvariantConfig;
+use cyfrin_foundry_config::InvariantConfig;
 use foundry_evm_core::constants::{
     CALLER, CHEATCODE_ADDRESS, DEFAULT_CREATE2_DEPLOYER, HARDHAT_CONSOLE_ADDRESS, MAGIC_ASSUME,
 };

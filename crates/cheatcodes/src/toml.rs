@@ -10,7 +10,7 @@ use crate::{
 };
 use alloy_dyn_abi::DynSolType;
 use foundry_common::fs;
-use foundry_config::fs_permissions::FsAccessKind;
+use cyfrin_foundry_config::fs_permissions::FsAccessKind;
 use serde_json::Value as JsonValue;
 use toml::Value as TomlValue;
 

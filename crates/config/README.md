@@ -12,10 +12,10 @@ in `FOUNDRY_PROFILE`. But all custom profiles inherit from the `default` profile
 
 ## foundry.toml
 
-Foundry's tools search for a `foundry.toml` or the filename in a `FOUNDRY_CONFIG` environment variable starting at the
+Foundry's tools search for a `foundry.toml` or the filename in a `cyfrin_foundry_config` environment variable starting at the
 current working directory. If it is not found, the parent directory, its parent directory, and so on are searched until
 the file is found or the root is reached. But the typical location for the global `foundry.toml` would
-be `~/.foundry/foundry.toml`, which is also checked. If the path set in `FOUNDRY_CONFIG` is absolute, no such search
+be `~/.foundry/foundry.toml`, which is also checked. If the path set in `cyfrin_foundry_config` is absolute, no such search
 takes place and the absolute path is used directly.
 
 In `foundry.toml` you can define multiple profiles, therefore the file is assumed to be _nested_, so each top-level key
@@ -49,7 +49,7 @@ When determining the profile to use, `Config` considers the following sources in
 and merge, at the per-key level:
 
 1. [`Config::default()`], which provides default values for all parameters.
-2. `foundry.toml` _or_ TOML file path in `FOUNDRY_CONFIG` environment variable.
+2. `foundry.toml` _or_ TOML file path in `cyfrin_foundry_config` environment variable.
 3. `FOUNDRY_` or `DAPP_` prefixed environment variables.
 
 The selected profile is the value of the `FOUNDRY_PROFILE` environment variable, or if it is not set, "default".

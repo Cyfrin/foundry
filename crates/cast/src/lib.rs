@@ -30,7 +30,7 @@ use foundry_common::{
     fs, TransactionReceiptWithRevertReason,
 };
 use foundry_compilers::flatten::Flattener;
-use foundry_config::Chain;
+use cyfrin_foundry_config::Chain;
 use futures::{future::Either, FutureExt, StreamExt};
 use rayon::prelude::*;
 use std::{
@@ -1788,7 +1788,7 @@ impl SimpleCast {
     ///
     /// ```
     /// # use cast::SimpleCast as Cast;
-    /// # use foundry_config::NamedChain;
+    /// # use cyfrin_foundry_config::NamedChain;
     /// # async fn foo() -> eyre::Result<()> {
     /// assert_eq!(
     ///     "/*
@@ -1823,7 +1823,7 @@ impl SimpleCast {
     ///
     /// ```
     /// # use cast::SimpleCast as Cast;
-    /// # use foundry_config::NamedChain;
+    /// # use cyfrin_foundry_config::NamedChain;
     /// # use std::path::PathBuf;
     /// # async fn expand() -> eyre::Result<()> {
     /// Cast::expand_etherscan_source_to_directory(

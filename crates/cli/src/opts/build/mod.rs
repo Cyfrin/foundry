@@ -9,7 +9,7 @@ mod paths;
 pub use self::paths::ProjectPathsArgs;
 
 // A set of solc compiler settings that can be set via command line arguments, which are intended
-// to be merged into an existing `foundry_config::Config`.
+// to be merged into an existing `cyfrin_foundry_config::Config`.
 //
 // See also `BuildArgs`.
 #[derive(Clone, Debug, Default, Serialize, Parser)]

@@ -143,7 +143,7 @@ foundry-cheatcodes = { path = "crates/cheatcodes" }
 foundry-cheatcodes-spec = { path = "crates/cheatcodes/spec" }
 foundry-cli = { path = "crates/cli" }
 foundry-common = { path = "crates/common" }
-foundry-config = { path = "crates/config" }
+cyfrin-foundry-config = { path = "crates/config" }
 foundry-debugger = { path = "crates/debugger" }
 foundry-evm = { path = "crates/evm/evm" }
 foundry-evm-core = { path = "crates/evm/core" }

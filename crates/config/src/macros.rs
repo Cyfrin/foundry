@@ -15,10 +15,10 @@
 /// ```rust
 /// use std::path::PathBuf;
 /// use serde::Serialize;
-/// use foundry_config::{Config, impl_figment_convert};
-/// use foundry_config::figment::*;
-/// use foundry_config::figment::error::Kind::InvalidType;
-/// use foundry_config::figment::value::*;
+/// use cyfrin_foundry_config::{Config, impl_figment_convert};
+/// use cyfrin_foundry_config::figment::*;
+/// use cyfrin_foundry_config::figment::error::Kind::InvalidType;
+/// use cyfrin_foundry_config::figment::value::*;
 /// #[derive(Default, Serialize)]
 /// struct MyArgs {
 ///     #[serde(skip_serializing_if = "Option::is_none")]
@@ -120,7 +120,7 @@ macro_rules! impl_figment_convert {
 /// Merge several nested `Provider` together with the type itself
 ///
 /// ```rust
-/// use foundry_config::{
+/// use cyfrin_foundry_config::{
 ///     figment::{value::*, *},
 ///     impl_figment_convert, merge_impl_figment_convert, Config,
 /// };

@@ -4,7 +4,7 @@ use alloy_provider::{network::AnyNetwork, Provider};
 use alloy_transport::Transport;
 use eyre::{ContextCompat, Result};
 use foundry_common::provider::{ProviderBuilder, RetryProvider};
-use foundry_config::{Chain, Config};
+use cyfrin_foundry_config::{Chain, Config};
 use std::{
     ffi::OsStr,
     future::Future,
@@ -24,9 +24,9 @@ pub use suggestions::*;
 mod abi;
 pub use abi::*;
 
-// reexport all `foundry_config::utils`
+// reexport all `cyfrin_foundry_config::utils`
 #[doc(hidden)]
-pub use foundry_config::utils::*;
+pub use cyfrin_foundry_config::utils::*;
 
 /// Deterministic fuzzer seed used for gas snapshots and coverage reports.
 ///

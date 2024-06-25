@@ -8,7 +8,7 @@ use alloy_signer_local::{
 use clap::Parser;
 use eyre::{Context, Result};
 use foundry_common::fs;
-use foundry_config::Config;
+use cyfrin_foundry_config::Config;
 use foundry_wallets::{RawWalletOpts, WalletOpts, WalletSigner};
 use rand::thread_rng;
 use serde_json::json;

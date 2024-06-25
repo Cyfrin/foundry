@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::canonicalized,
     Project,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment,
     figment::{
         error::Kind::InvalidType,
@@ -140,9 +140,9 @@ pub struct CoreBuildArgs {
 impl CoreBuildArgs {
     /// Returns the `Project` for the current workspace
     ///
-    /// This loads the `foundry_config::Config` for the current workspace (see
+    /// This loads the `cyfrin_foundry_config::Config` for the current workspace (see
     /// `find_project_root_path` and merges the cli `BuildArgs` into it before returning
-    /// [`foundry_config::Config::project()`]).
+    /// [`cyfrin_foundry_config::Config::project()`]).
     pub fn project(&self) -> Result<Project<MultiCompiler>> {
         let config = self.try_load_config_emit_warnings()?;
         Ok(config.project()?)

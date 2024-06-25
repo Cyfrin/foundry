@@ -2,7 +2,7 @@
 use alloy_primitives::{Address, B256, U256};
 use clap::{ArgAction, Parser};
 use eyre::ContextCompat;
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment::{
         self,
         error::Kind::InvalidType,
@@ -19,18 +19,18 @@ pub type Breakpoints = FxHashMap<char, (Address, usize)>;
 
 /// `EvmArgs` and `EnvArgs` take the highest precedence in the Config/Figment hierarchy.
 /// All vars are opt-in, their default values are expected to be set by the
-/// [`foundry_config::Config`], and are always present ([`foundry_config::Config::default`])
+/// [`cyfrin_foundry_config::Config`], and are always present ([`cyfrin_foundry_config::Config::default`])
 ///
 /// Both have corresponding types in the `evm_adapters` crate which have mandatory fields.
 /// The expected workflow is
-///   1. load the [`foundry_config::Config`]
+///   1. load the [`cyfrin_foundry_config::Config`]
 ///   2. merge with `EvmArgs` into a `figment::Figment`
 ///   3. extract `evm_adapters::Opts` from the merged `Figment`
 ///
 /// # Example
 ///
 /// ```ignore
-/// use foundry_config::Config;
+/// use cyfrin_foundry_config::Config;
 /// use forge::executor::opts::EvmOpts;
 /// use foundry_common::evm::EvmArgs;
 /// # fn t(args: EvmArgs) {
@@ -293,7 +293,7 @@ fn id<S: serde::Serializer>(chain: &Option<Chain>, s: S) -> Result<S::Ok, S::Err
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::NamedChain;
+    use cyfrin_foundry_config::NamedChain;
 
     #[test]
     fn can_parse_chain_id() {

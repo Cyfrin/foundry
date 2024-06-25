@@ -8,7 +8,7 @@ use foundry_compilers::{
     utils::source_files_iter,
     Project, ProjectCompileOutput,
 };
-use foundry_config::{
+use cyfrin_foundry_config::{
     figment::{
         self,
         error::Kind::InvalidType,
@@ -21,19 +21,19 @@ use serde::Serialize;
 use std::path::PathBuf;
 use watchexec::config::{InitConfig, RuntimeConfig};
 
-foundry_config::merge_impl_figment_convert!(BuildArgs, args);
+cyfrin_foundry_config::merge_impl_figment_convert!(BuildArgs, args);
 
 /// CLI arguments for `forge build`.
 ///
 /// CLI arguments take the highest precedence in the Config/Figment hierarchy.
 /// In order to override them in the foundry `Config` they need to be merged into an existing
-/// `figment::Provider`, like `foundry_config::Config` is.
+/// `figment::Provider`, like `cyfrin_foundry_config::Config` is.
 ///
 /// # Example
 ///
 /// ```
 /// use foundry_cli::cmd::forge::build::BuildArgs;
-/// use foundry_config::Config;
+/// use cyfrin_foundry_config::Config;
 /// # fn t(args: BuildArgs) {
 /// let config = Config::from(&args);
 /// # }
@@ -115,9 +115,9 @@ impl BuildArgs {
 
     /// Returns the `Project` for the current workspace
     ///
-    /// This loads the `foundry_config::Config` for the current workspace (see
+    /// This loads the `cyfrin_foundry_config::Config` for the current workspace (see
     /// [`utils::find_project_root_path`] and merges the cli `BuildArgs` into it before returning
-    /// [`foundry_config::Config::project()`]
+    /// [`cyfrin_foundry_config::Config::project()`]
     pub fn project(&self) -> Result<Project> {
         self.args.project()
     }
@@ -164,7 +164,7 @@ impl Provider for BuildArgs {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use foundry_config::filter::SkipBuildFilter;
+    use cyfrin_foundry_config::filter::SkipBuildFilter;
 
     #[test]
     fn can_parse_build_filters() {

@@ -15,7 +15,7 @@ use foundry_common::{
     contracts::{ContractsByAddress, ContractsByArtifact},
     TestFunctionExt, TestFunctionKind,
 };
-use foundry_config::{FuzzConfig, InvariantConfig};
+use cyfrin_foundry_config::{FuzzConfig, InvariantConfig};
 use foundry_evm::{
     constants::CALLER,
     decode::RevertDecoder,
