@@ -19,7 +19,6 @@ use figment::{
 use foundry_compilers::{
     artifacts::{
         output_selection::{ContractOutputSelection, OutputSelection},
-        remappings::{RelativeRemapping, Remapping},
         serde_helpers, BytecodeHash, DebuggingSettings, EvmVersion, Libraries,
         ModelCheckerSettings, ModelCheckerTarget, Optimizer, OptimizerDetails, RevertStrings,
         Settings, SettingsMetadata, Severity,
@@ -34,6 +33,10 @@ use foundry_compilers::{
     error::SolcError,
     ConfigurableArtifacts, Project, ProjectPathsConfig,
 };
+
+// cyfrin downstream need public access to these
+pub use foundry_compilers::artifacts::remappings::{RelativeRemapping, Remapping};
+
 use inflector::Inflector;
 use regex::Regex;
 use revm_primitives::{FixedBytes, SpecId};
